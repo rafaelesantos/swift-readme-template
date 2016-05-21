@@ -26,7 +26,6 @@ let package = Package(
 
 ## Usage example
 
-__Open connection__
 
 ```swift
 import Project
