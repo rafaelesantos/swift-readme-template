@@ -1,9 +1,10 @@
 # Product Name
 > Short blurb about what your product does.
 
-[![NPM Version][npm-image]][npm-url]
+[![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+[![License][license-image]][license-url]
+[![codebeat-badge][codebeat-image]][codebeat-url]
 
 One to two paragraph statement about your product and what it does.
 
@@ -11,21 +12,28 @@ One to two paragraph statement about your product and what it does.
 
 ## Installation
 
-OS X & Linux:
+Add this project on your `Package.swift`
 
-```sh
-npm install my-crazy-module --save
-```
+```swift
+import PackageDescription
 
-Windows:
-
-```sh
-edit autoexec.bat
+let package = Package(
+    dependencies: [
+        .Package(url: "https://github.com/user/project.git", majorVersion: 0, minor: 0)
+    ]
+)
 ```
 
 ## Usage example
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+__Open connection__
+
+```swift
+import Project
+let proj = Class(param: String?)
+proj.run()
+```
+
 
 ## Development setup
 
@@ -33,7 +41,6 @@ Describe how to install all development dependencies and how to run an automated
 
 ```sh
 make install
-npm test
 ```
 
 ## Release History
@@ -59,8 +66,11 @@ Distributed under the XYZ license. See ``LICENSE`` for more information.
 
 [https://github.com/yourname/github-link](https://github.com/dbader/)
 
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
+[swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
+[swift-url]: https://swift.org/
+[license-image]: https://img.shields.io/badge/License-MIT-blue.svg
+[license-url]: LICENSE
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+[codebeat-image]: https://codebeat.co/badges/c19b47ea-2f9d-45df-8458-b2d952fe9dad
+[codebeat-url]: https://codebeat.co/projects/github-com-vsouza-awesomeios-com
