@@ -7,14 +7,23 @@ One to two paragraph statement about your product and what it does.
 
 ## Installation
 
-Add this project on your `Package.swift`
+Add this project to your `Package.swift` file.
 
 ```swift
 import PackageDescription
 
 let package = Package(
     dependencies: [
-        .Package(url: "https://github.com/user/project.git", majorVersion: 0, minor: 0)
+        .package(url: "https://github.com/rafaelesantos/.git", branch: "main")
+    ],
+    targets: [
+        .target(
+            name: "YourProject",
+            dependencies: [
+                .product(
+                    name: "",
+                    package: ""),
+            ]),
     ]
 )
 ```
@@ -23,7 +32,5 @@ let package = Package(
 
 
 ```swift
-import Project
-let proj = Class(param: String?)
-proj.run()
+
 ```
